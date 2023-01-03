@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+		<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+		<title>HTML Template til React</title>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<script type="text/babel">
+			const Opgave1 = () => {
+				return <h2>JSX er godt for maven!</h2>;
+			};
+			ReactDOM.render(<Opgave1 />, document.getElementById("root"));
+
+			const Opgave2 = () => {
+				return 10 * 10;
+			};
+			ReactDOM.render(<Opgave2 />, document.getElementById("root"));
+
+			const Opgave3 = () => {
+				return (
+					<ul>
+						<li>Livret 1</li>
+						<li>Livret 2</li>
+						<li>Livret 3</li>
+						<li>Livret 4</li>
+						<li>Livret 5</li>
+					</ul>
+				);
+			};
+			ReactDOM.render(<Opgave3 />, document.getElementById("root"));
+
+			const Opgave4 = () => {
+				return (
+					<div>
+						<p>
+							{" "}
+							posuere egestas nec eget mi. Curabitur faucibus tincidunt metus,
+							in gravida lorem bibendum eu.{" "}
+						</p>
+						<p>
+							Maecenas consectetur ligula ac dolor hendrerit finibus. Donec eget
+							mauris tincidunt, imperdiet lacus nec, pharetra felis.{" "}
+						</p>
+					</div>
+				);
+			};
+			ReactDOM.render(<Opgave4 />, document.getElementById("root"));
+
+			const Opgave5 = () => {
+				return (
+					<>
+						<p>
+							{" "}
+							posuere egestas nec eget mi. Curabitur faucibus tincidunt metus,
+							in gravida lorem bibendum eu.{" "}
+						</p>
+						<p>
+							Maecenas consectetur ligula ac dolor hendrerit finibus. Donec eget
+							mauris tincidunt, imperdiet lacus nec, pharetra felis.{" "}
+						</p>
+					</>
+				);
+			};
+			ReactDOM.render(<Opgave5 />, document.getElementById("root"));
+
+			const Opgave6 = () => {
+				return <input type="button" />;
+			};
+			ReactDOM.render(<Opgave6 />, document.getElementById("root"));
+
+			const Opgave7 = () => {
+				return <section class="mainwrapper"></section>;
+			};
+			ReactDOM.render(<Opgave7 />, document.getElementById("root"));
+
+			const Opgave8 = () => {
+				const time = 10;
+				let text;
+				if (time < 12) {
+					text = "Godmorgen";
+				} else {
+					text = "Goddag";
+				}
+				return <p>{text}</p>;
+			};
+			ReactDOM.render(<Opgave8 />, document.getElementById("root"));
+
+			const Opgave9 = () => {
+				const time = 10;
+				return <p>{time < 12 ? "Godmorgen" : "Goddag"}</p>;
+			};
+			ReactDOM.render(<Opgave9 />, document.getElementById("root"));
+		</script>
+	</body>
+</html>

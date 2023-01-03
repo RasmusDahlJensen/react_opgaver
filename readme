@@ -1,0 +1,2 @@
+Jeg så først for sent at reactDOM.render er deprecated og jeg skulle istedet bruge createroot
+men det virker (indtil videre)
