@@ -10,15 +10,17 @@
 		<div id="root"></div>
 
 		<script type="text/babel">
+			const root = ReactDOM.createRoot(document.getElementById("root"));
+
 			const Opgave1 = () => {
 				return <h2>JSX er godt for maven!</h2>;
 			};
-			ReactDOM.render(<Opgave1 />, document.getElementById("root"));
+			// root.render(<Opgave1 />);
 
 			const Opgave2 = () => {
 				return 10 * 10;
 			};
-			ReactDOM.render(<Opgave2 />, document.getElementById("root"));
+			// root.render(<Opgave2 />);
 
 			const Opgave3 = () => {
 				return (
@@ -31,7 +33,7 @@
 					</ul>
 				);
 			};
-			ReactDOM.render(<Opgave3 />, document.getElementById("root"));
+			// root.render(<Opgave3 />);
 
 			const Opgave4 = () => {
 				return (
@@ -48,7 +50,7 @@
 					</div>
 				);
 			};
-			ReactDOM.render(<Opgave4 />, document.getElementById("root"));
+			// root.render(<Opgave4 />);
 
 			const Opgave5 = () => {
 				return (
@@ -65,17 +67,17 @@
 					</>
 				);
 			};
-			ReactDOM.render(<Opgave5 />, document.getElementById("root"));
+			// root.render(<Opgave5 />);
 
 			const Opgave6 = () => {
 				return <input type="button" />;
 			};
-			ReactDOM.render(<Opgave6 />, document.getElementById("root"));
+			// root.render(<Opgave6 />);
 
 			const Opgave7 = () => {
 				return <section class="mainwrapper"></section>;
 			};
-			ReactDOM.render(<Opgave7 />, document.getElementById("root"));
+			// root.render(<Opgave7 />);
 
 			const Opgave8 = () => {
 				const time = 10;
@@ -87,13 +89,30 @@
 				}
 				return <p>{text}</p>;
 			};
-			ReactDOM.render(<Opgave8 />, document.getElementById("root"));
+			// root.render(<Opgave8 />);
 
 			const Opgave9 = () => {
 				const time = 10;
 				return <p>{time < 12 ? "Godmorgen" : "Goddag"}</p>;
 			};
-			ReactDOM.render(<Opgave9 />, document.getElementById("root"));
+			// root.render(<Opgave9 />);
+
+			const Opgave10 = () => {
+				return (
+					<>
+						<Opgave1 />
+						<Opgave2 />
+						<Opgave3 />
+						<Opgave4 />
+						<Opgave5 />
+						<Opgave6 />
+						<Opgave7 />
+						<Opgave8 />
+						<Opgave9 />
+					</>
+				);
+			};
+			root.render(<Opgave10 />);
 		</script>
 	</body>
 </html>
