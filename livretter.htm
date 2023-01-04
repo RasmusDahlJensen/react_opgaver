@@ -16,8 +16,22 @@
 		<div id="root"></div>
 
 		<script type="text/babel">
-			const root = ReactDOM.CreateRoot(document.getElementById("root"));
+			const root = ReactDOM.createRoot(document.getElementById("root"));
 			// Her skal du indsætte din react kode
+
+			const mealArr = ["lasagna", "Pie", "pizza", "spaghetti", "ost"];
+
+			const Meal = (props) => {
+				return (
+					<ul>
+						{props.data.map((meal, key) => {
+							return <li key={key}>{meal}</li>;
+						})}
+					</ul>
+				);
+			};
+
+			root.render(<Meal data={mealArr} />);
 		</script>
 	</body>
 </html>
